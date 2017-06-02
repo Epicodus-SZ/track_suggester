@@ -1,0 +1,15 @@
+.container {
+  margin:0 auto;
+  border:1px #ccc solid;
+}
+
+.courseBox:not(:first-child),.col:not(:last-child) {
+  padding-right:7px;
+  padding-left:7px;
+}
+
+.courseBoxContent {background-color:green;}
+
+.recommended {
+  background-color: red;
+}
