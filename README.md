@@ -1,6 +1,8 @@
 # Track Suggester
 A web page that recommends a programming course from 5 options.  The recommendation is determined according to the users answers to five questions.  Originally coded on 6/2/2017.  By Steve Zaske
 
+You can see the page live here: [https://epicodus-sz.github.io/track_suggester/](https://epicodus-sz.github.io/track_suggester/)
+
 ## What's included
 Within the repository you'll find the following directories and files:
 
