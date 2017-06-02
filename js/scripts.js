@@ -6,7 +6,7 @@ var courseScore = function(courseName) {
   var score = 0;
 
   var frontBackRange = parseInt($("#frontBack").val()) - 2;
-  var personalRange = parseInt($("#personal").val()) - 2;
+  var tabsRange = parseInt($("#tabs").val()) - 2;
   var nerdLevelRange = parseInt($("#nerdLevel").val()) - 2;
   var moneyRange = parseInt($("#money").val()) - 2;
   var alignmentRange = parseInt($("#alignment").val()) - 2;
@@ -14,19 +14,19 @@ var courseScore = function(courseName) {
   //course logic here
   switch(courseName) {
       case "design":
-        score = score - frontBackRange - personalRange - nerdLevelRange - moneyRange - alignmentRange;
+        score = score - frontBackRange - tabsRange - nerdLevelRange - moneyRange - alignmentRange;
         break;
       case "cSharp":
-        score = score + frontBackRange + personalRange + nerdLevelRange - moneyRange + alignmentRange;
+        score = score + frontBackRange - tabsRange + nerdLevelRange - moneyRange + alignmentRange;
         break;
       case "java":
-        score = score + frontBackRange + personalRange + nerdLevelRange - moneyRange + alignmentRange;
+        score = score + frontBackRange + tabsRange + nerdLevelRange - moneyRange + alignmentRange;
         break;
       case "php":
-        score = score + frontBackRange + personalRange + nerdLevelRange - alignmentRange;
+        score = score + frontBackRange + tabsRange + nerdLevelRange - moneyRange + alignmentRange;
         break;
       case "ruby":
-        score = score - frontBackRange - personalRange + nerdLevelRange - moneyRange - alignmentRange;
+        score = score - frontBackRange + tabsRange - nerdLevelRange - moneyRange - alignmentRange;
         break;
 
       default:

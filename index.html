@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -13,31 +14,55 @@
       <p>This web page recommends the Epicodus programming track that is most appropriatefor your personality type. To get a recommendation adjust the following 5 sliders to best suit your personality.
       <form>
         <div class="form-group">
-          <label for="input1">Front or Back?</label>
+          <label class="text-warning" for="frontBack">What kind of development do you prefer?</label>
+          <div class="rangeTicks">
+            <div class="tick tick1">Front-end</div>
+            <div class="tick tick2">Web or Browser</div>
+            <div class="tick tick3">Either</div>
+            <div class="tick tick4">SQL/MongoDB</div>
+            <div class="tick tick5">Back-end</div>
+            </br>
+          </div>
           <input type="range" name="frontBack" id="frontBack" value="2" min="0" max="4">
         </div>
         <div class="form-group">
-          <label for="input1">Personal or Business</label>
-          <input type="range" name="personal" id="personal" value="2" min="0" max="4">
+          <label class="text-warning" for="tabs">Spaces or Tabs?</label>
+          <div class="rangeTicks">
+            <div class="tick tick1">Spaces (more options)</div>
+            <div class="tick tick2">Spaces</div>
+            <div class="tick tick3">Either (compilers removes both)</div>
+            <div class="tick tick4">Tabs</div>
+            <div class="tick tick5">Tabs (it's less typing!)</div>
+            </br>
+          </div>
+          <input type="range" name="tabs" id="tabs" value="2" min="0" max="4">
         </div>
         <div class="form-group">
-          <label for="input1">nerdlevel</label>
+          <label class="text-warning" for="nerdLevel">How nerdy are you?</label>
+          <div class="rangeTicks">
+            <div class="tick tick1">T-shirt Screen Printer</div>
+            <div class="tick tick2">Programmer</div>
+            <div class="tick tick3">Open-Source Greybeard</div>
+            <div class="tick tick4">Anime Enthusiast</div>
+            <div class="tick tick5">Live-Action Role Player</div>
+            </br>
+          </div>
           <input type="range" name="nerdLevel" id="nerdLevel" value="2" min="0" max="4">
         </div>
         <div class="form-group">
-          <label for="input1">How much money would you like to make?</label>
+          <label class="text-warning" for="money">Where would you like to live?</label>
           <div class="rangeTicks">
-            <div class="tick tick1">Who cares about money?</div>
-            <div class="tick tick2">Good</div>
-            <div class="tick tick3">Neutral</div>
-            <div class="tick tick4">Evil</div>
-            <div class="tick tick5">Bill Gates level</div>
+            <div class="tick tick1">Nickelsville</div>
+            <div class="tick tick2">Unincorporated King County</div>
+            <div class="tick tick3">Bothell</div>
+            <div class="tick tick4">Queen Anne</div>
+            <div class="tick tick5">Yarrow Point</div>
             </br>
           </div>
           <input type="range" name="money" id="money" value="2" min="0" max="4">
         </div>
         <div class="form-group">
-          <label for="input1">What is your D&D characters most recent alignment?</label>
+          <label class="text-warning" for="alignment">What is your most recent D&D character's alignment?</label>
           <div class="rangeTicks">
             <div class="tick tick1">Lawful Good</div>
             <div class="tick tick2">Good</div>
@@ -47,19 +72,13 @@
             </br>
           </div>
           <input type="range" name="alignment" id="alignment" value="2" min="0" max="4" list="stepList">
-          <datalist id="steplist">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </datalist>
+
         </div>
 
       </form>
       <div id="results" class="row">
         <div class="col-md-12">
-          <h2>Results here</h2>
+          <h2>We recommend:</h2>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
           <div id="design" class="courseBoxContent">
