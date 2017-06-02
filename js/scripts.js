@@ -1,15 +1,38 @@
 // Business (or back-end) logic:
 var courses = ["design","cSharp","java", "php", "ruby"];
 
-var courseScore = function() {
-//math formula goes here
-var frontBackRange = parseInt($("#frontBack").val());
-var personalRange = parseInt($("#personal").val());
-var nerdLevelRange = parseInt($("#nerdLevel").val());
-var moneyRange = parseInt($("#money").val());
-var alignmentRange = parseInt($("#alignment").val());
+var courseScore = function(courseName) {
+  //math formula goes here
+  var score = 0;
 
+  var frontBackRange = parseInt($("#frontBack").val()) - 2;
+  var personalRange = parseInt($("#personal").val()) - 2;
+  var nerdLevelRange = parseInt($("#nerdLevel").val()) - 2;
+  var moneyRange = parseInt($("#money").val()) - 2;
+  var alignmentRange = parseInt($("#alignment").val()) - 2;
 
+  //course logic here
+  switch(courseName) {
+      case "design":
+        score = score - frontBackRange - personalRange - nerdLevelRange - moneyRange - alignmentRange;
+        break;
+      case "cSharp":
+        score = score + frontBackRange + personalRange + nerdLevelRange - moneyRange + alignmentRange;
+        break;
+      case "java":
+        score = score + frontBackRange + personalRange + nerdLevelRange - moneyRange + alignmentRange;
+        break;
+      case "php":
+        score = score + frontBackRange + personalRange + nerdLevelRange - alignmentRange;
+        break;
+      case "ruby":
+        score = score - frontBackRange - personalRange + nerdLevelRange - moneyRange - alignmentRange;
+        break;
+
+      default:
+        score = 0;
+  }
+  return score;
 };
 
 
@@ -22,12 +45,13 @@ var setRecommended = function(){
     //calculate the course score
     // if score is above zero highlight course box else fade it
 
-    courseScore();
-  });
+    if (courseScore(entry) > 1){
+      $("#"+entry).addClass("recommended");
+    } else {
+      $("#"+entry).removeClass("recommended");
+    }
 
-  if ($("#frontBack").val() === "0") {
-    $("#designCourse").addClass("recommended");
-  }
+  });
 }
 
 

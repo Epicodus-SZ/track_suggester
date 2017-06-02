@@ -9,7 +9,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Questions here</h1>
+      <h1>Epicodus Programming Track Suggester</h1>
+      <p>This web page recommends the Epicodus programming track that is most appropriatefor your personality type. To get a recommendation adjust the following 5 sliders to best suit your personality.
       <form>
         <div class="form-group">
           <label for="input1">Front or Back?</label>
@@ -24,12 +25,35 @@
           <input type="range" name="nerdLevel" id="nerdLevel" value="2" min="0" max="4">
         </div>
         <div class="form-group">
-          <label for="input1">Money?</label>
+          <label for="input1">How much money would you like to make?</label>
+          <div class="rangeTicks">
+            <div class="tick tick1">Who cares about money?</div>
+            <div class="tick tick2">Good</div>
+            <div class="tick tick3">Neutral</div>
+            <div class="tick tick4">Evil</div>
+            <div class="tick tick5">Bill Gates level</div>
+            </br>
+          </div>
           <input type="range" name="money" id="money" value="2" min="0" max="4">
         </div>
         <div class="form-group">
-          <label for="input1">Alignment?</label>
-          <input type="range" name="alignment" id="alignment" value="2" min="0" max="4">
+          <label for="input1">What is your D&D characters most recent alignment?</label>
+          <div class="rangeTicks">
+            <div class="tick tick1">Lawful Good</div>
+            <div class="tick tick2">Good</div>
+            <div class="tick tick3">Neutral</div>
+            <div class="tick tick4">Evil</div>
+            <div class="tick tick5">Chaotic evil</div>
+            </br>
+          </div>
+          <input type="range" name="alignment" id="alignment" value="2" min="0" max="4" list="stepList">
+          <datalist id="steplist">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </datalist>
         </div>
 
       </form>
@@ -38,31 +62,31 @@
           <h2>Results here</h2>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
-          <div id="designCourse" class="courseBoxContent">
+          <div id="design" class="courseBoxContent">
             <h2>CSS/Design</h2>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
           </div>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
-          <div id="cSharpCourse" class="courseBoxContent">
+          <div id="cSharp" class="courseBoxContent">
             <h2>C#/.Net</h2>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
           </div>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
-          <div id="javaCourse" class="courseBoxContent">
+          <div id="java" class="courseBoxContent">
             <h2>Java/Android</h2>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
           </div>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
-          <div id="phpCourse" class="courseBoxContent">
+          <div id="php" class="courseBoxContent">
             <h2>PHP/Drupal</h2>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
           </div>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
-          <div id="rubyCourse" class="courseBoxContent">
+          <div id="ruby" class="courseBoxContent">
             <h2>Ruby/Rails</h2>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
           </div>

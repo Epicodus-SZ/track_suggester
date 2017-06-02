@@ -13,3 +13,44 @@
 .recommended {
   background-color: red;
 }
+
+.rangeTicks {
+  width: 100%;
+  clear: left;
+  font-size: 0px; <!--gets rid of white-space: -->
+}
+
+.tick {
+  font-size: 14px;
+  display: inline-block;
+  margin:0px;
+  width: 15%;
+
+}
+
+.tick1 {
+  text-align: left;
+}
+
+.tick2 {
+  text-align: center;
+  margin-left:2.5%;
+}
+
+.tick3 {
+  text-align: center;
+  margin-left: 10%;
+
+}
+
+.tick4 {
+  margin-left: 9.5%;
+  text-align: center;
+
+}
+
+.tick5 {
+  margin-left: 3%;
+  text-align: right;
+
+}
