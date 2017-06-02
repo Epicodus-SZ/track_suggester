@@ -10,8 +10,8 @@
     <title>Epicodus Track Suggester</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Epicodus Programming Track Suggester</h1>
+    <div id="container" class="container">
+      <h1>EPICODUS: Track Suggester</h1>
       <p>This web page recommends the Epicodus programming track that is most appropriate for your personality type. To get a recommendation adjust the following 5 sliders to best suit your personality.
       <form>
         <div class="form-group">
@@ -73,13 +73,11 @@
             </br>
           </div>
           <input type="range" name="alignment" id="alignment" value="2" min="0" max="4" list="stepList">
-
         </div>
-
       </form>
       <div id="results" class="row">
         <div class="col-md-12">
-          <h2>We recommend:</h2>
+          <h2>Our recommendation is...</h2>
         </div>
         <div class="courseBox col-xs-6 col-sm-4">
           <div id="design" class="courseBoxContent">
@@ -112,6 +110,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="footer" class="container">
+      <p>(C) STEVE ZASKE, 2017</p>
     </div>
   </body>
 </html>
